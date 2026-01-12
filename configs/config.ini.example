@@ -1,0 +1,13 @@
+[meter_db]
+host = ai-metrix-dev1-autoind-327e.a.timescaledb.io
+port = 25897
+database = mdm-dev
+user = tatva_readonly
+password = ILsNhjI5fETbkWyc
+
+[report_db]
+host = ai-mdm-test-qa.postgres.database.azure.com
+port = 5432
+database = pgdb-reports-test-qa
+user = tatva_readonly
+password = 6Yopc4msdqKeoMDn
