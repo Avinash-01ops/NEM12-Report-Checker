@@ -1,1 +1,0 @@
-Docs for the NEM12 validator project. Add design notes, schema mappings, and runbook here.

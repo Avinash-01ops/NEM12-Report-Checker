@@ -1,5 +1,4 @@
-psycopg2-binary
-pandas
-python-dotenv
-pytest
-psycopg2
+# CSV Comparison Tool Dependencies
+# Python standard library is used, no external dependencies required
+# However, if you want to use pandas for advanced comparison, uncomment below:
+# pandas>=2.0.0

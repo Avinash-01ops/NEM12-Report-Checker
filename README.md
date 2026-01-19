@@ -1,26 +1,34 @@
-# NEM12 Validator
+# NEM12 Report Comparison Tool
 
-Project to validate NEM12 energy reports against meter readings stored in PostgreSQL.
+Compares Australian Energy Market NEM12 reports before and after production release. Compares files logically by NMI, date, and interval index.
 
-Goals:
-- Compare interval values (30-minute) between NEM12 and meter readings
-- Validate quality flag mappings
-- Report missing intervals and discrepancies
-- Generate a comprehensive validation report and metrics
+## Usage
 
-Quickstart
+1. Place CSV files in the `csv_input` folder
+2. Run:
+   ```bash
+   python compare_csv.py
+   ```
+3. Select files when prompted (BEFORE and AFTER production release)
 
-1. Create a virtualenv and install requirements:
-
+Or specify files directly:
 ```bash
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r requirements.txt
+python compare_csv.py before.csv after.csv
 ```
 
-2. Configure DB credentials (use env vars or `configs/config.ini`)
-3. Run validation:
+## What It Compares
 
-```bash
-python scripts/run_validation.py --config configs/config.ini
-```
+- Missing/extra NMIs
+- Missing/extra dates per NMI
+- Interval value mismatches (tolerance: 0.001)
+- Ignores metadata (timestamps, headers, record order)
+
+## Output
+
+- `[OK]` = Files identical, no changes detected
+- `[X]` = Discrepancies found with detailed location (NMI, Date, Interval Index)
+
+## Exit Codes
+
+- `0` = Identical files
+- `1` = Discrepancies found
