@@ -1,0 +1,10 @@
+{
+  "report_name": "Utopia Electricity CET",
+  "fallback_interval": "30",
+  "missing_data_handling_value": "LOCF",
+  "missing_data_handling_label": "Interpolate (LOCF)",
+  "cumulative_substitution_type": "Type 19 - Zero",
+  "exclude_null": true,
+  "execution_timestamp_utc": "28-01-2026 06:33",
+  "execution_timestamp_datetime": "2026-01-28T06:33:59.807000"
+}

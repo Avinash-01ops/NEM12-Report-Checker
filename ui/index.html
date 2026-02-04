@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEM12 Report Comparison</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-left">
+                <button class="icon-btn" id="closeBtn">×</button>
+                <span class="header-title">Nem12 Comparison Ui</span>
+                <span class="chevron">▼</span>
+            </div>
+            <div class="header-right">
+                <button class="icon-btn" title="Share">□↑</button>
+                <button class="icon-btn" title="Upload">↑</button>
+                <button class="icon-btn" title="Refresh">↻</button>
+                <button class="icon-btn" title="More">⋯</button>
+                <button class="stop-btn">
+                    Stop
+                </button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <h1 class="title">NEM12 Report Comparison</h1>
+            <p class="subtitle">Upload Before and after nem12 reports to compare parellely.</p>
+
+            <div class="upload-section-compact">
+                <label class="upload-btn-compact">
+                    <input type="file" id="fileInput" multiple accept=".csv,.txt,.nem12" class="file-input-hidden">
+                    <span class="upload-text">Upload Files</span>
+                </label>
+                <div class="upload-status" id="uploadStatus"></div>
+            </div>
+
+            <div class="file-mapping-section" id="fileMappingSection" style="display: none;">
+                <div class="mapping-header">
+                    <h3 class="mapping-title">File Mapping</h3>
+                    <div class="mapping-controls">
+                        <button class="select-all-btn" id="selectAllBtn">Select All</button>
+                        <button class="deselect-all-btn" id="deselectAllBtn">Deselect All</button>
+                    </div>
+                </div>
+                <div class="mapping-grid-container">
+                    <div class="mapping-grid-header">
+                        <div class="grid-col-checkbox">Select</div>
+                        <div class="grid-col-before">Before Files</div>
+                        <div class="grid-col-after">After Files</div>
+                    </div>
+                    <div class="mapping-grid-body" id="mappingGridBody"></div>
+                </div>
+            </div>
+
+            <div class="compare-section" id="compareSection" style="display: none;">
+                <button class="compare-btn" id="compareBtn">
+                    Compare Files
+                </button>
+            </div>
+
+            <div class="results-section" id="resultsSection" style="display: none;">
+                <div class="results-card">
+                    <div class="results-header">
+                        <div class="results-header-left">
+                            <h2 class="results-title">Comparison Results</h2>
+                            <button class="reset-page-btn" id="resetPageBtn" title="Reset and start new comparison">
+                                Reset
+                            </button>
+                        </div>
+                        <div class="results-header-right">
+                            <div class="overall-summary-compact">
+                                <div class="summary-badge">
+                                    <span class="summary-value" id="overallTotalCount">0</span>
+                                    <span class="summary-label">Total Issues</span>
+                                </div>
+                                <div class="summary-badge high">
+                                    <span class="summary-value" id="overallHighCount">0</span>
+                                    <span class="summary-label">Critical</span>
+                                </div>
+                                <div class="summary-badge medium">
+                                    <span class="summary-value" id="overallMediumCount">0</span>
+                                    <span class="summary-label">Mismatches</span>
+                                </div>
+                            </div>
+                            <button class="download-all-btn" id="downloadAllBtn" title="Download all comparison results">
+                                Download All Results
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Pair-wise Results -->
+                    <div class="pair-results-container" id="pairResultsContainer"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

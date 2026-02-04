@@ -1,0 +1,24 @@
+{
+  "name": "nem12_validator-main---copy",
+  "version": "1.0.0",
+  "description": "Compare NEM12 reports (BEFORE vs AFTER) to verify data integrity and detect changes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akshayhirani157-cpu/nem12_validator-main.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/akshayhirani157-cpu/nem12_validator-main/issues"
+  },
+  "homepage": "https://github.com/akshayhirani157-cpu/nem12_validator-main#readme",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,4 +1,7 @@
-# CSV Comparison Tool Dependencies
-# Python standard library is used, no external dependencies required
-# However, if you want to use pandas for advanced comparison, uncomment below:
-# pandas>=2.0.0
+# NEM12 Validator Dependencies
+
+# Playwright for automated report downloading
+playwright>=1.40.0
+
+# Environment variable management
+python-dotenv>=1.0.0

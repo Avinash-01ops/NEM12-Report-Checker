@@ -1,0 +1,10 @@
+{
+  "comparison_pairs": [
+    {
+      "before_file": "Utopia_Electricity_CET_AE69008084_20251101-20251201_BEFORE.csv",
+      "after_file": "Utopia_Electricity_CET_AE69008084_20251101-20251201_AFTER.csv",
+      "description": "Utopia Electricity CET - NEM12 before/after comparison"
+    }
+  ]
+}
+
